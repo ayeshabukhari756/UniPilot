@@ -1,0 +1,743 @@
+/* =========================================
+   UNIPILOT — ASSIGNMENTS
+========================================= */
+
+.assignments-page {
+  min-height: 100vh;
+  padding: 42px 7%;
+  background: #f5f3ef;
+  color: #242321;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.assignments-header {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.assignments-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #77736c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.assignments-header h1 {
+  margin: 0 0 9px;
+
+  color: #242321;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+
+.assignments-header p {
+  max-width: 560px;
+  margin: 0;
+
+  color: #77736c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.assignment-summary {
+  display: flex;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d2;
+  border-radius: 10px;
+
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.assignment-summary div {
+  min-width: 78px;
+  padding: 13px 15px;
+
+  text-align: center;
+}
+
+.assignment-summary div + div {
+  border-left: 1px solid #e7e3dc;
+}
+
+.assignment-summary strong {
+  display: block;
+
+  color: #242321;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.assignment-summary span {
+  display: block;
+  margin-top: 4px;
+
+  color: #77736c;
+  font-size: 10px;
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.assignment-section {
+  max-width: 1100px;
+  margin: 0 auto 42px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.section-heading > div span {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #8a867f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #242321;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.assignment-total {
+  color: #8a867f;
+  font-size: 11px;
+}
+
+/* =========================================
+   ADD ASSIGNMENT FORM
+========================================= */
+
+.assignment-form {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr auto;
+
+  gap: 10px;
+  padding: 17px;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d2;
+  border-radius: 12px;
+}
+
+.assignment-form input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  padding: 11px 12px;
+
+  border: 1px solid #ddd9d2;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #242321;
+
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.assignment-form input::placeholder {
+  color: #aaa59d;
+}
+
+.assignment-form input:focus {
+  border-color: #242321;
+}
+
+.assignment-form button {
+  padding: 0 17px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #242321;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.assignment-form button:hover {
+  background: #3a3835;
+}
+
+.assignment-error {
+  margin: 10px 0 0;
+
+  color: #8d4d4d;
+  font-size: 12px;
+}
+
+/* =========================================
+   SUBJECT SUGGESTIONS
+========================================= */
+
+.subject-input-wrapper {
+  position: relative;
+  min-width: 0;
+}
+
+.subject-input-wrapper input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.subject-suggestions {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+
+  max-height: 220px;
+  overflow-y: auto;
+
+  padding: 5px;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d2;
+  border-radius: 9px;
+
+  box-shadow: 0 10px 25px rgba(36, 35, 33, 0.1);
+}
+
+.subject-suggestions button {
+  width: 100%;
+
+  padding: 9px 10px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: transparent;
+  color: #242321;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  text-align: left;
+  cursor: pointer;
+}
+
+.subject-suggestions button:hover {
+  background: #f5f3ef;
+}
+
+/* =========================================
+   ASSIGNMENT LIST
+========================================= */
+
+.assignment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.assignment-card {
+  display: grid;
+  grid-template-columns: 32px 1fr auto auto;
+
+  align-items: center;
+
+  gap: 18px;
+  padding: 17px 19px;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d2;
+  border-radius: 11px;
+
+  transition: 0.2s ease;
+}
+
+.assignment-card:hover {
+  border-color: #cfcac2;
+  transform: translateY(-1px);
+}
+
+.assignment-number {
+  color: #aaa59d;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.assignment-info {
+  min-width: 0;
+}
+
+.subject {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #8a867f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.assignment-info h2 {
+  margin: 0 0 5px;
+
+  color: #242321;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.assignment-info p {
+  margin: 0;
+
+  color: #77736c;
+  font-size: 11px;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.assignment-status {
+  white-space: nowrap;
+}
+
+.assignment-status span {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #f0ede8;
+  color: #242321;
+}
+
+.status-done {
+  background: #eceae6;
+  color: #77736c;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.assignment-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.assignment-actions button {
+  padding: 8px 11px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.complete-btn {
+  border: 1px solid #242321;
+  background: #ffffff;
+  color: #242321;
+}
+
+.complete-btn:hover {
+  background: #242321;
+  color: #ffffff;
+}
+
+.delete-btn {
+  border: 1px solid #ddd9d2;
+  background: #ffffff;
+  color: #8a867f;
+}
+
+.delete-btn:hover {
+  border-color: #242321;
+  color: #242321;
+}
+
+/* =========================================
+   COMPLETED
+========================================= */
+
+.assignment-card.completed {
+  opacity: 0.55;
+}
+
+.assignment-card.completed h2 {
+  text-decoration: line-through;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+  padding: 55px 30px;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d2;
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.empty-state h2 {
+  margin: 0 0 8px;
+
+  color: #242321;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.empty-state p {
+  margin: 0;
+
+  color: #77736c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   ASSIGNMENT CALENDAR
+========================================= */
+
+.assignment-calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.calendar-assignment {
+  display: grid;
+  grid-template-columns: 55px 1fr auto;
+
+  align-items: center;
+
+  gap: 17px;
+  padding: 15px 18px;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d2;
+  border-radius: 11px;
+
+  transition: 0.2s ease;
+}
+
+.calendar-assignment:hover {
+  border-color: #cfcac2;
+  transform: translateY(-1px);
+}
+
+.calendar-date {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  background: #f0ede8;
+}
+
+.calendar-date strong {
+  color: #242321;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.calendar-date span {
+  margin-top: 3px;
+
+  color: #8a867f;
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.calendar-assignment-info {
+  min-width: 0;
+}
+
+.calendar-assignment-info > span {
+  display: block;
+  margin-bottom: 4px;
+
+  color: #8a867f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.calendar-assignment-info h3 {
+  margin: 0 0 4px;
+
+  color: #242321;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.calendar-assignment-info p {
+  margin: 0;
+
+  color: #77736c;
+  font-size: 10px;
+}
+
+.calendar-status {
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: #f0ede8;
+  color: #242321;
+
+  font-size: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.calendar-completed {
+  opacity: 0.55;
+}
+
+.calendar-completed .calendar-status {
+  background: #eceae6;
+  color: #77736c;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .assignments-page {
+    padding: 35px;
+  }
+
+  .assignment-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .assignment-form button {
+    min-height: 42px;
+    padding: 11px 15px;
+  }
+
+  .assignment-card {
+    grid-template-columns: 32px 1fr auto;
+  }
+
+  .assignment-actions {
+    grid-column: 2 / -1;
+  }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .assignments-page {
+    padding: 25px 18px;
+  }
+
+  .assignments-header {
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 32px;
+  }
+
+  .assignments-header h1 {
+    font-size: 30px;
+  }
+
+  .assignment-summary {
+    width: 100%;
+  }
+
+  .assignment-summary div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .assignment-form {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .assignment-form button {
+    width: 100%;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .assignment-card {
+    grid-template-columns: 28px 1fr;
+    gap: 11px 12px;
+    padding: 15px;
+  }
+
+  .assignment-status {
+    grid-column: 2;
+  }
+
+  .assignment-actions {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  .assignment-actions button {
+    flex: 1;
+  }
+
+  .calendar-assignment {
+    grid-template-columns: 50px 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .calendar-status {
+    grid-column: 2;
+    width: fit-content;
+  }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .assignments-page {
+    padding: 20px 15px;
+  }
+
+  .assignments-header h1 {
+    font-size: 27px;
+  }
+
+  .assignments-header p {
+    font-size: 13px;
+  }
+
+  .assignment-summary div {
+    padding: 11px 7px;
+  }
+
+  .assignment-summary strong {
+    font-size: 18px;
+  }
+
+  .assignment-summary span {
+    font-size: 9px;
+  }
+
+  .assignment-card {
+    padding: 14px;
+  }
+
+  .assignment-info h2 {
+    font-size: 13px;
+  }
+
+  .assignment-actions {
+    gap: 6px;
+  }
+
+  .assignment-actions button {
+    padding: 8px 9px;
+  }
+
+  .calendar-assignment {
+    padding: 13px;
+  }
+
+}
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 360px) {
+
+  .assignments-page {
+    padding: 17px 12px;
+  }
+
+  .assignments-header h1 {
+    font-size: 25px;
+  }
+
+  .assignment-summary div {
+    padding: 10px 5px;
+  }
+
+  .assignment-summary strong {
+    font-size: 17px;
+  }
+
+}

@@ -1,0 +1,320 @@
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about-page {
+  min-height: 100vh;
+
+  background: #f7f9fc;
+
+  color: #172033;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.about-navbar {
+  height: 80px;
+
+  padding: 0 7%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e8ee;
+}
+
+.about-logo {
+  color: #172033;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.about-nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+.about-nav-links a {
+  color: #555e70;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.about-nav-links a:hover {
+  color: #172033;
+}
+
+.about-nav-links .active {
+  color: #172033;
+
+  font-weight: 600;
+}
+
+.about-nav-button {
+  padding: 11px 19px;
+
+  border-radius: 7px;
+
+  background: #172033;
+
+  color: #ffffff !important;
+}
+
+
+/* =========================================
+   ABOUT CONTENT
+========================================= */
+
+.about-content {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 95px 7% 80px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.about-label {
+  margin-bottom: 18px;
+
+  color: #697386;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.about-content h1 {
+  margin-bottom: 45px;
+
+  color: #172033;
+
+  font-size: 52px;
+
+  line-height: 1.1;
+
+  font-weight: 600;
+
+  letter-spacing: -2px;
+}
+
+
+/* =========================================
+   ABOUT BOX
+========================================= */
+
+.about-box {
+  padding: 65px 80px;
+
+  background: #eef1f5;
+
+  border: 1px solid #dfe4eb;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 35px rgba(23, 32, 51, 0.05);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.about-box-icon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4eb;
+
+  border-radius: 14px;
+
+  font-size: 30px;
+
+  box-shadow: 0 5px 15px rgba(23, 32, 51, 0.04);
+}
+
+
+/* =========================================
+   ABOUT PARAGRAPH
+========================================= */
+
+.about-box p {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  color: #5f697a;
+
+  font-size: 16px;
+
+  line-height: 2;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   WHY UNIPILOT
+========================================= */
+
+.why-section {
+  max-width: 650px;
+
+  margin: 55px auto 0;
+}
+
+.why-section .about-label {
+  margin-bottom: 14px;
+}
+
+.why-text {
+  color: #697386;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   VALUES
+========================================= */
+
+.about-bottom {
+  margin-top: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 35px;
+}
+
+.about-bottom span {
+  color: #697386;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .about-navbar {
+    height: auto;
+
+    padding: 18px 5%;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+
+  .about-nav-links {
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+
+  .about-nav-links a {
+    font-size: 12px;
+  }
+
+
+  .about-content {
+    padding: 70px 5% 60px;
+  }
+
+
+  .about-content h1 {
+    margin-bottom: 32px;
+
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .about-box {
+    padding: 45px 25px;
+
+    border-radius: 16px;
+  }
+
+
+  .about-box p {
+    font-size: 14px;
+
+    line-height: 1.9;
+  }
+
+
+  .why-section {
+    margin-top: 45px;
+  }
+
+
+  .why-text {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+
+  .about-bottom {
+    gap: 18px;
+
+    flex-wrap: wrap;
+  }
+
+}

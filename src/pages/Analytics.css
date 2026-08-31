@@ -1,0 +1,571 @@
+/* =========================================
+   UNIPILOT ANALYTICS
+========================================= */
+
+.analytics-page {
+  min-height: 100vh;
+  padding: 38px 6%;
+  background: #f7f6f3;
+  color: #242321;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.analytics-header {
+  max-width: 1100px;
+  margin: 0 auto 32px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.analytics-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #8a867f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.analytics-header h1 {
+  margin: 0 0 8px;
+
+  color: #242321;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.analytics-header p {
+  max-width: 560px;
+  margin: 0;
+
+  color: #77736c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.period-select {
+  padding: 10px 13px;
+
+  border: 1px solid #dedbd5;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #242321;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.period-select:focus {
+  border-color: #242321;
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.stats-grid {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.stat-card {
+  padding: 19px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1ded8;
+  border-radius: 10px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(36, 35, 33, 0.06);
+}
+
+.stat-card span {
+  color: #8a867f;
+  font-size: 10px;
+}
+
+.stat-card strong {
+  display: block;
+
+  margin: 8px 0 4px;
+
+  color: #242321;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.stat-card small {
+  color: #817d76;
+  font-size: 9px;
+}
+
+
+/* =========================================
+   MAIN ANALYTICS GRID
+========================================= */
+
+.analytics-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 14px;
+}
+
+.chart-card {
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1ded8;
+  border-radius: 11px;
+}
+
+
+/* =========================================
+   CARD HEADINGS
+========================================= */
+
+.card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.card-heading span {
+  color: #8a867f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.card-heading h2 {
+  margin: 5px 0 0;
+
+  color: #242321;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.card-heading > strong {
+  color: #242321;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   WEEKLY BAR CHART
+========================================= */
+
+.bar-chart {
+  height: 240px;
+
+  margin-top: 25px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  gap: 12px;
+}
+
+.bar-column {
+  height: 100%;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bar-value {
+  margin-bottom: 6px;
+
+  color: #817d76;
+  font-size: 9px;
+}
+
+.bar-track {
+  width: 100%;
+  max-width: 30px;
+  height: 175px;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  background: #eeece8;
+  border-radius: 6px;
+}
+
+.bar {
+  width: 100%;
+
+  background: #242321;
+
+  border-radius: 6px;
+
+  transition: height 0.4s ease;
+}
+
+.bar-column > span {
+  margin-top: 8px;
+
+  color: #8a867f;
+  font-size: 9px;
+}
+
+
+/* =========================================
+   COMPLETION CHART
+========================================= */
+
+.completion-chart {
+  min-height: 240px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 28px;
+}
+
+
+/* =========================================
+   COMPLETION RING
+========================================= */
+
+.completion-ring {
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 14px solid #242321;
+  border-right-color: #ddd9d2;
+  border-bottom-color: #e6e3dd;
+
+  border-radius: 50%;
+}
+
+.completion-ring strong {
+  color: #242321;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.completion-ring span {
+  margin-top: 2px;
+
+  color: #817d76;
+  font-size: 9px;
+}
+
+
+/* =========================================
+   COMPLETION DETAILS
+========================================= */
+
+.completion-details {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.completion-details div {
+  min-width: 135px;
+
+  display: grid;
+  grid-template-columns: 7px 1fr auto;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #77736c;
+  font-size: 10px;
+}
+
+.completion-details strong {
+  color: #242321;
+  font-size: 10px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+}
+
+.dot.dark {
+  background: #242321;
+}
+
+.dot.grey {
+  background: #8a867f;
+}
+
+.dot.light {
+  background: #d4d0ca;
+}
+
+
+/* =========================================
+   WEEKLY INSIGHT
+========================================= */
+
+.insights-card {
+  max-width: 1100px;
+  margin: 14px auto 0;
+
+  padding: 23px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  background: #242321;
+  border-radius: 11px;
+}
+
+.insights-card .analytics-eyebrow {
+  margin-bottom: 7px;
+  color: #bdb9b1;
+}
+
+.insights-card h2 {
+  margin: 0 0 7px;
+
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.insights-card p {
+  max-width: 650px;
+  margin: 0;
+
+  color: #cbc8c2;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.insight-number {
+  min-width: 115px;
+
+  text-align: center;
+}
+
+.insight-number strong {
+  display: block;
+
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.insight-number span {
+  color: #c4c0b9;
+  font-size: 9px;
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .analytics-page {
+    padding: 35px 5%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 750px) {
+
+  .analytics-page {
+    padding: 30px 25px;
+  }
+
+  .analytics-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .period-select {
+    width: 100%;
+  }
+
+  .insights-card {
+    align-items: flex-start;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .analytics-page {
+    padding: 25px 18px;
+  }
+
+  .analytics-header {
+    margin-bottom: 25px;
+  }
+
+  .analytics-header h1 {
+    font-size: 27px;
+  }
+
+  .analytics-header p {
+    font-size: 12px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 17px;
+  }
+
+  .analytics-grid {
+    gap: 12px;
+  }
+
+  .chart-card {
+    padding: 18px;
+  }
+
+  .bar-chart {
+    height: 220px;
+    gap: 7px;
+  }
+
+  .bar-track {
+    max-width: 25px;
+    height: 160px;
+  }
+
+  .completion-chart {
+    flex-direction: column;
+    padding: 15px 0;
+    gap: 22px;
+  }
+
+  .completion-details {
+    width: 100%;
+  }
+
+  .completion-details div {
+    width: 100%;
+  }
+
+  .insights-card {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 20px;
+  }
+
+  .insight-number {
+    width: 100%;
+    text-align: left;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .analytics-page {
+    padding: 20px 15px;
+  }
+
+  .analytics-header h1 {
+    font-size: 25px;
+  }
+
+  .chart-card {
+    padding: 16px;
+  }
+
+  .card-heading h2 {
+    font-size: 16px;
+  }
+
+  .bar-chart {
+    gap: 5px;
+  }
+
+  .bar-track {
+    max-width: 22px;
+  }
+
+  .completion-ring {
+    width: 120px;
+    height: 120px;
+  }
+
+}

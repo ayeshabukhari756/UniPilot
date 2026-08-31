@@ -1,0 +1,608 @@
+/* =========================================
+   UNIPILOT TIMETABLE
+========================================= */
+
+.timetable-page {
+  min-height: 100vh;
+  padding: 42px 6%;
+  background: #f5f3ef;
+  color: #242321;
+}
+
+
+/* =========================================
+   TOP SECTION
+========================================= */
+
+.timetable-top {
+  max-width: 1250px;
+  margin: 0 auto 32px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.timetable-label {
+  margin: 0 0 10px;
+
+  color: #77736c;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.timetable-top h1 {
+  margin: 0 0 8px;
+
+  color: #242321;
+
+  font-size: 38px;
+  line-height: 1.15;
+  font-weight: 600;
+
+  letter-spacing: -1px;
+}
+
+.timetable-subtitle {
+  margin: 0;
+
+  color: #77736c;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.timetable-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+.add-class-btn,
+.import-timetable-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 17px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-class-btn {
+  border: 1px solid #242321;
+
+  background: #242321;
+  color: white;
+}
+
+.add-class-btn:hover {
+  background: #3b3936;
+  transform: translateY(-1px);
+}
+
+.import-timetable-btn {
+  border: 1px solid #d9d5ce;
+
+  background: white;
+  color: #242321;
+}
+
+.import-timetable-btn:hover {
+  border-color: #aaa59d;
+  background: #faf9f7;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   IMPORT MESSAGE
+========================================= */
+
+.import-message {
+  max-width: 1250px;
+  margin: -15px auto 18px;
+
+  color: #77736c;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   CALENDAR TOOLBAR
+========================================= */
+
+.calendar-toolbar {
+  max-width: 1250px;
+  margin: 0 auto 18px;
+
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #d9d5ce;
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   WEEK NAVIGATION
+========================================= */
+
+.week-navigation {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.week-navigation button {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ddd9d2;
+  border-radius: 8px;
+
+  background: white;
+  color: #242321;
+
+  font-family: inherit;
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.week-navigation button:hover {
+  background: #f5f3ef;
+  border-color: #bbb6ae;
+}
+
+.week-navigation div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.week-navigation strong {
+  color: #242321;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.week-navigation span {
+  color: #8a867f;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   TODAY BUTTON
+========================================= */
+
+.today-btn {
+  padding: 8px 14px;
+
+  border: 1px solid #ddd9d2;
+  border-radius: 8px;
+
+  background: white;
+  color: #242321;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.today-btn:hover {
+  background: #f5f3ef;
+  border-color: #bbb6ae;
+}
+
+
+/* =========================================
+   CALENDAR
+========================================= */
+
+.calendar {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 65px repeat(5, 1fr);
+
+  border: 1px solid #d9d5ce;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  background: white;
+
+  box-shadow: 0 8px 25px rgba(36, 35, 33, 0.05);
+}
+
+
+/* =========================================
+   DAY HEADER CORNER
+========================================= */
+
+.time-corner {
+  height: 70px;
+
+  border-right: 1px solid #e5e1da;
+  border-bottom: 1px solid #e5e1da;
+
+  background: #faf9f7;
+}
+
+
+/* =========================================
+   DAY HEADERS
+========================================= */
+
+.calendar-day {
+  height: 70px;
+
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  border-right: 1px solid #e5e1da;
+  border-bottom: 1px solid #e5e1da;
+
+  background: #faf9f7;
+}
+
+.calendar-day:last-child {
+  border-right: none;
+}
+
+.calendar-day span {
+  color: #8a867f;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.calendar-day strong {
+  color: #242321;
+
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.calendar-day.today {
+  background: #eeece8;
+}
+
+.calendar-day.today span,
+.calendar-day.today strong {
+  color: #242321;
+}
+
+
+/* =========================================
+   TIME COLUMN
+========================================= */
+
+.time-column {
+  display: flex;
+  flex-direction: column;
+
+  border-right: 1px solid #e5e1da;
+
+  background: #faf9f7;
+}
+
+.time-column span {
+  height: 82px;
+
+  padding: 11px 7px 0;
+
+  box-sizing: border-box;
+
+  color: #99948c;
+
+  font-size: 9px;
+
+  text-align: right;
+
+  border-bottom: 1px solid #eeeae4;
+}
+
+
+/* =========================================
+   DAY COLUMNS
+========================================= */
+
+.calendar-column {
+  position: relative;
+
+  min-height: 738px;
+
+  padding: 7px;
+
+  border-right: 1px solid #e5e1da;
+
+  background-image: linear-gradient(
+    to bottom,
+    transparent 81px,
+    #eeeae4 82px
+  );
+
+  background-size: 100% 82px;
+}
+
+.calendar-column:last-child {
+  border-right: none;
+}
+
+.today-column {
+  background-color: #fdfcfb;
+}
+
+
+/* =========================================
+   CLASS BLOCK
+========================================= */
+
+.class-block {
+  margin-bottom: 10px;
+
+  padding: 11px;
+
+  border-radius: 8px;
+
+  border-left: 3px solid #242321;
+
+  box-shadow: 0 3px 10px rgba(36, 35, 33, 0.06);
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.class-block:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 6px 16px rgba(36, 35, 33, 0.09);
+}
+
+.class-block strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #242321;
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.class-block span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #625e58;
+
+  font-size: 9px;
+}
+
+.class-block small {
+  color: #8a867f;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   SUBJECT COLORS
+========================================= */
+
+.class-block.web {
+  border-left-color: #5f5b55;
+  background: #f0eeea;
+}
+
+.class-block.compiler {
+  border-left-color: #77736c;
+  background: #f3f1ed;
+}
+
+.class-block.cyber {
+  border-left-color: #4f514d;
+  background: #eef0ec;
+}
+
+
+/* =========================================
+   CALENDAR LEGEND
+========================================= */
+
+.calendar-legend {
+  max-width: 1250px;
+  margin: 17px auto 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  color: #77736c;
+
+  font-size: 10px;
+}
+
+.calendar-legend div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+}
+
+.web-dot {
+  background: #5f5b55;
+}
+
+.compiler-dot {
+  background: #77736c;
+}
+
+.cyber-dot {
+  background: #4f514d;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .timetable-page {
+    padding: 35px;
+    overflow-x: auto;
+  }
+
+  .calendar,
+  .calendar-toolbar,
+  .timetable-top,
+  .calendar-legend,
+  .import-message {
+    min-width: 900px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .timetable-page {
+    padding: 28px 22px;
+  }
+
+  .timetable-top {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .timetable-actions {
+    width: 100%;
+  }
+
+  .add-class-btn,
+  .import-timetable-btn {
+    flex: 1;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .timetable-page {
+    padding: 22px 16px;
+  }
+
+  .timetable-top h1 {
+    font-size: 30px;
+  }
+
+  .timetable-subtitle {
+    font-size: 13px;
+  }
+
+  .timetable-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-class-btn,
+  .import-timetable-btn {
+    width: 100%;
+  }
+
+  .calendar-toolbar {
+    padding: 10px 12px;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 360px) {
+
+  .timetable-page {
+    padding: 18px 12px;
+  }
+
+  .timetable-top h1 {
+    font-size: 27px;
+  }
+
+}

@@ -1,0 +1,750 @@
+/* =========================================
+   UNIPILOT — STUDY PLANNER
+   Clean / Minimal / Responsive
+========================================= */
+
+.planner-page {
+  min-height: 100vh;
+  padding: 42px 6%;
+  background: #f5f3ef;
+  color: #242321;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.planner-header {
+  max-width: 1100px;
+  margin: 0 auto 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.planner-eyebrow,
+.section-label {
+  margin: 0 0 9px;
+  color: #77736c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+}
+
+.planner-header h1 {
+  margin: 0 0 8px;
+  color: #242321;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+
+.planner-header p:last-child {
+  margin: 0;
+  color: #77736c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   PROGRESS BOX
+========================================= */
+
+.progress-box {
+  min-width: 125px;
+  padding: 14px 18px;
+  border: 1px solid #d9d5ce;
+  border-radius: 10px;
+  background: transparent;
+  text-align: center;
+}
+
+.progress-box strong {
+  display: block;
+  color: #242321;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.progress-box span {
+  display: block;
+  margin-top: 3px;
+  color: #77736c;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+.progress-bar {
+  max-width: 1100px;
+  height: 5px;
+  margin: 0 auto 38px;
+  overflow: hidden;
+  background: #d9d5ce;
+  border-radius: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #242321;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+
+/* =========================================
+   MAIN SECTIONS
+========================================= */
+
+.planner-section {
+  max-width: 1100px;
+  margin: 0 auto 38px;
+}
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #242321;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   STUDY FORM
+========================================= */
+
+.planner-form {
+  display: grid;
+  grid-template-columns:
+    1.2fr
+    1.4fr
+    1fr
+    0.8fr
+    0.8fr
+    0.9fr
+    auto;
+
+  gap: 9px;
+  padding: 16px;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d2;
+  border-radius: 11px;
+}
+
+.planner-form input,
+.planner-form select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  padding: 10px 11px;
+
+  border: 1px solid #d9d5ce;
+  border-radius: 7px;
+
+  outline: none;
+  background: #ffffff;
+  color: #242321;
+
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.planner-form input::placeholder {
+  color: #aaa59d;
+}
+
+.planner-form input:focus,
+.planner-form select:focus {
+  border-color: #242321;
+}
+
+.planner-form button {
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #242321;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.planner-form button:hover {
+  background: #3a3835;
+}
+
+
+/* =========================================
+   STUDY LIST
+========================================= */
+
+.planner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+/* =========================================
+   STUDY CARD
+========================================= */
+
+.study-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 16px 18px;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d2;
+  border-radius: 10px;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.study-card:hover {
+  border-color: #cfcac2;
+  transform: translateY(-1px);
+}
+
+.study-card.completed {
+  opacity: 0.55;
+}
+
+
+/* =========================================
+   STUDY TIME
+========================================= */
+
+.study-time {
+  width: 68px;
+  flex-shrink: 0;
+}
+
+.study-time strong {
+  display: block;
+  color: #242321;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.study-time span {
+  color: #77736c;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   STUDY INFO
+========================================= */
+
+.study-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.study-subject {
+  color: #77736c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.study-info h2 {
+  margin: 4px 0 6px;
+  color: #242321;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.study-info h2,
+.study-subject {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   PRIORITY
+========================================= */
+
+.priority {
+  display: inline-block;
+  padding: 4px 8px;
+
+  border: 1px solid #d9d5ce;
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.priority.high {
+  background: #242321;
+  border-color: #242321;
+  color: #ffffff;
+}
+
+.priority.medium {
+  background: #f5f3ef;
+  color: #5f5b55;
+}
+
+.priority.low {
+  background: #ffffff;
+  color: #8a867f;
+}
+
+
+/* =========================================
+   STUDY ACTIONS
+========================================= */
+
+.study-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.study-actions button {
+  padding: 7px 10px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.complete-study {
+  border: 1px solid #242321;
+  background: #ffffff;
+  color: #242321;
+}
+
+.complete-study:hover {
+  background: #242321;
+  color: #ffffff;
+}
+
+.delete-study {
+  border: 1px solid #ddd9d2;
+  background: #ffffff;
+  color: #77736c;
+}
+
+.delete-study:hover {
+  border-color: #242321;
+  color: #242321;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-planner {
+  padding: 45px 25px;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d2;
+  border-radius: 11px;
+
+  text-align: center;
+}
+
+.empty-planner h2 {
+  margin: 0 0 7px;
+  color: #242321;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.empty-planner p {
+  margin: 0;
+  color: #77736c;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   ACADEMIC TOOLS
+========================================= */
+
+.academic-tools {
+  max-width: 1100px;
+  margin: 45px auto 0;
+  padding: 24px;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d2;
+  border-radius: 11px;
+}
+
+.academic-tools-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e7e3dc;
+}
+
+.academic-tools-header h2 {
+  margin: 0 0 7px;
+  color: #242321;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.academic-tools-header p:last-child {
+  margin: 0;
+  color: #77736c;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   GPA RESULT
+========================================= */
+
+.gpa-result {
+  min-width: 90px;
+  padding-left: 18px;
+
+  border-left: 1px solid #ddd9d2;
+
+  text-align: center;
+}
+
+.gpa-result span {
+  display: block;
+  color: #77736c;
+  font-size: 10px;
+}
+
+.gpa-result strong {
+  display: block;
+  margin-top: 3px;
+  color: #242321;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   GPA TABLE
+========================================= */
+
+.gpa-table {
+  margin-top: 20px;
+}
+
+.gpa-table-header,
+.gpa-row {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 35px;
+  gap: 9px;
+  align-items: center;
+}
+
+.gpa-table-header {
+  margin-bottom: 8px;
+  padding: 0 3px;
+
+  color: #8a867f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.gpa-row {
+  margin-bottom: 8px;
+}
+
+.gpa-row input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  padding: 9px 10px;
+
+  border: 1px solid #d9d5ce;
+  border-radius: 7px;
+
+  outline: none;
+  background: #ffffff;
+  color: #242321;
+
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.gpa-row input::placeholder {
+  color: #aaa59d;
+}
+
+.gpa-row input:focus {
+  border-color: #242321;
+}
+
+
+/* =========================================
+   REMOVE COURSE
+========================================= */
+
+.remove-course {
+  width: 29px;
+  height: 29px;
+
+  border: 1px solid #ddd9d2;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #77736c;
+
+  font-size: 17px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.remove-course:hover {
+  border-color: #242321;
+  color: #242321;
+}
+
+
+/* =========================================
+   GPA ACTIONS
+========================================= */
+
+.gpa-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-top: 17px;
+}
+
+.add-course,
+.calculate-gpa {
+  padding: 9px 13px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-course {
+  border: 1px solid #d9d5ce;
+  background: #ffffff;
+  color: #242321;
+}
+
+.add-course:hover {
+  border-color: #242321;
+}
+
+.calculate-gpa {
+  border: none;
+  background: #242321;
+  color: #ffffff;
+}
+
+.calculate-gpa:hover {
+  background: #3a3835;
+}
+
+.gpa-note {
+  margin: 14px 0 0;
+  color: #8a867f;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .planner-page {
+    padding: 35px;
+  }
+
+  .planner-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .planner-form button {
+    grid-column: span 2;
+  }
+
+  .study-card {
+    display: grid;
+    grid-template-columns: 68px 1fr auto;
+  }
+
+  .study-actions {
+    grid-column: 2 / -1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .planner-page {
+    padding: 25px 18px;
+  }
+
+  .planner-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .progress-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .planner-form {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-form button {
+    grid-column: auto;
+  }
+
+  .study-card {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .study-time {
+    width: 55px;
+  }
+
+  .study-actions {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  .study-actions button {
+    flex: 1;
+  }
+
+  .academic-tools {
+    padding: 18px;
+  }
+
+  .academic-tools-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .gpa-result {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0 0;
+    border-left: none;
+    border-top: 1px solid #ddd9d2;
+  }
+
+  .gpa-table-header {
+    display: none;
+  }
+
+  .gpa-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gpa-row input:first-child {
+    grid-column: span 2;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+  .planner-page {
+    padding: 20px 15px;
+  }
+
+  .planner-header h1 {
+    font-size: 29px;
+  }
+
+  .planner-header p:last-child {
+    font-size: 13px;
+  }
+
+  .study-card {
+    gap: 10px;
+  }
+
+  .study-info h2 {
+    font-size: 13px;
+  }
+
+  .gpa-row {
+    grid-template-columns: 1fr;
+  }
+
+  .gpa-row input:first-child {
+    grid-column: auto;
+  }
+
+  .gpa-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-course,
+  .calculate-gpa {
+    width: 100%;
+  }
+}

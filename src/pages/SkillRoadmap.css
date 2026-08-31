@@ -1,0 +1,646 @@
+/* =========================================
+   UNIPILOT — SKILL ROADMAP
+========================================= */
+
+.roadmap-page {
+  min-height: 100vh;
+  padding: 38px 42px 60px;
+  background: #f7f9fc;
+  color: #172033;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.roadmap-header {
+  max-width: 1120px;
+  margin: 0 auto 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.roadmap-heading {
+  max-width: 620px;
+}
+
+.roadmap-eyebrow,
+.card-label {
+  margin: 0 0 7px;
+  color: #7c8494;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.roadmap-heading h1 {
+  margin: 0 0 7px;
+  color: #172033;
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 650;
+  letter-spacing: -0.7px;
+}
+
+.roadmap-heading > p:last-child {
+  max-width: 520px;
+  margin: 0;
+  color: #737c8d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   CAREER SELECTOR
+========================================= */
+
+.career-selector {
+  width: 235px;
+  flex-shrink: 0;
+}
+
+.career-selector label {
+  display: block;
+  margin-bottom: 7px;
+  color: #7c8494;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.career-selector select {
+  width: 100%;
+  padding: 11px 13px;
+
+  border: 1px solid #dfe3eb;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #172033;
+
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.career-selector select:focus {
+  border-color: #172033;
+}
+
+
+/* =========================================
+   CAREER OVERVIEW
+========================================= */
+
+.career-overview {
+  max-width: 1120px;
+  margin: 0 auto 15px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 0.75fr;
+  gap: 15px;
+}
+
+.career-main,
+.progress-summary {
+  background: #ffffff;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+}
+
+
+/* =========================================
+   CAREER MAIN
+========================================= */
+
+.career-main {
+  padding: 21px 23px;
+}
+
+.career-main h2 {
+  margin: 0 0 7px;
+  color: #172033;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.career-main > p:not(.card-label) {
+  max-width: 600px;
+  margin: 0;
+
+  color: #737c8d;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   CAREER SCOPE
+========================================= */
+
+.scope-box {
+  margin-top: 15px;
+  padding-top: 13px;
+  border-top: 1px solid #edf0f4;
+}
+
+.scope-box span {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #858d9c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.scope-box p {
+  max-width: 650px;
+  margin: 0;
+
+  color: #5f6878;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   PROGRESS SUMMARY
+========================================= */
+
+.progress-summary {
+  padding: 21px 23px;
+}
+
+.progress-number {
+  margin-bottom: 1px;
+
+  color: #172033;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 650;
+}
+
+.progress-summary > span {
+  color: #858d9c;
+  font-size: 10px;
+}
+
+.summary-line {
+  width: 100%;
+  height: 5px;
+  margin: 15px 0 18px;
+
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e9edf3;
+}
+
+.summary-line div {
+  height: 100%;
+  border-radius: 10px;
+  background: #172033;
+  transition: width 0.3s ease;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.summary-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.summary-stats strong {
+  color: #172033;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.summary-stats span {
+  color: #858d9c;
+  font-size: 9px;
+}
+
+
+/* =========================================
+   NEXT SKILL
+========================================= */
+
+.next-skill {
+  max-width: 1120px;
+  margin: 0 auto 25px;
+  padding: 16px 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  border: 1px solid #e0e5ed;
+  border-left: 3px solid #172033;
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+.next-skill .card-label {
+  margin-bottom: 5px;
+}
+
+.next-skill h2 {
+  margin: 0 0 4px;
+
+  color: #172033;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.next-skill p:last-child {
+  margin: 0;
+
+  color: #7a8392;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.next-skill button {
+  flex-shrink: 0;
+
+  padding: 9px 13px;
+
+  border: 1px solid #172033;
+  border-radius: 7px;
+
+  background: #172033;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.next-skill button:hover {
+  background: #29344a;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ROADMAP SECTION
+========================================= */
+
+.roadmap-section {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+.section-title .card-label {
+  margin-bottom: 5px;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  color: #172033;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.section-title > span {
+  color: #858d9c;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   SKILLS GRID
+========================================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.skill-item {
+  min-width: 0;
+
+  display: flex;
+
+  background: #ffffff;
+  border: 1px solid #e3e7ee;
+  border-radius: 10px;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.skill-item:hover {
+  border-color: #d3d9e3;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 18px rgba(23, 32, 51, 0.05);
+}
+
+
+/* =========================================
+   SKILL NUMBER
+========================================= */
+
+.skill-index {
+  width: 43px;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 20px;
+
+  color: #a0a8b6;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SKILL CONTENT
+========================================= */
+
+.skill-content {
+  flex: 1;
+  min-width: 0;
+
+  padding: 17px 17px 15px 0;
+}
+
+.skill-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.skill-category {
+  display: block;
+  margin-bottom: 4px;
+
+  color: #8992a1;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.skill-top h3 {
+  margin: 0;
+
+  color: #172033;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+
+/* =========================================
+   SKILL STATUS
+========================================= */
+
+.skill-status {
+  flex-shrink: 0;
+
+  padding: 4px 7px;
+  border-radius: 5px;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.skill-status.completed {
+  background: #172033;
+  color: #ffffff;
+}
+
+.skill-status.in-progress {
+  background: #edf0f4;
+  color: #4f5969;
+}
+
+.skill-status.next {
+  background: #f5f6f8;
+  color: #858d9c;
+}
+
+
+/* =========================================
+   SKILL PROGRESS
+========================================= */
+
+.skill-progress {
+  margin-top: 13px;
+}
+
+.skill-progress-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 5px;
+
+  color: #8a93a1;
+  font-size: 9px;
+}
+
+.skill-progress-info strong {
+  color: #4d5665;
+  font-size: 9px;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 4px;
+
+  overflow: hidden;
+  border-radius: 10px;
+
+  background: #e9edf2;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 10px;
+
+  background: #172033;
+
+  transition: width 0.3s ease;
+}
+
+
+/* =========================================
+   UPDATE BUTTON
+========================================= */
+
+.skill-update {
+  margin-top: 9px;
+
+  padding: 5px 8px;
+
+  border: 1px solid #dce1e8;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #5e6776;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.skill-update:hover {
+  border-color: #172033;
+  color: #172033;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .roadmap-page {
+    padding: 30px 25px 50px;
+  }
+
+  .roadmap-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .career-selector {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .career-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .roadmap-page {
+    padding: 24px 18px 40px;
+  }
+
+  .roadmap-heading h1 {
+    font-size: 29px;
+  }
+
+  .roadmap-heading > p:last-child {
+    font-size: 12px;
+  }
+
+  .career-main,
+  .progress-summary {
+    padding: 18px;
+  }
+
+  .next-skill {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .next-skill button {
+    width: 100%;
+  }
+
+  .skill-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .skill-status {
+    align-self: flex-start;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .roadmap-page {
+    padding: 20px 15px 35px;
+  }
+
+  .roadmap-heading h1 {
+    font-size: 27px;
+  }
+
+  .career-selector {
+    width: 100%;
+    max-width: none;
+  }
+
+  .career-main h2 {
+    font-size: 18px;
+  }
+
+  .career-main > p:not(.card-label),
+  .scope-box p {
+    font-size: 11px;
+  }
+
+  .section-title h2 {
+    font-size: 16px;
+  }
+
+  .skill-index {
+    width: 36px;
+  }
+
+  .skill-content {
+    padding-right: 12px;
+  }
+}

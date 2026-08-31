@@ -1,0 +1,365 @@
+/* ================================
+   UNIPILOT APP LAYOUT
+================================ */
+
+.dashboard-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f8f9fb;
+  color: #172033;
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.dashboard-layout .sidebar {
+  width: 230px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 30px 18px;
+  background: #ffffff;
+  border-right: 1px solid #eceef1;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.dashboard-layout .dashboard-logo {
+  padding: 0 12px;
+  margin-bottom: 36px;
+
+  color: #172033;
+  text-decoration: none;
+
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+
+  flex-shrink: 0;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.dashboard-layout .sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  flex-shrink: 0;
+}
+
+
+/* Section headings */
+
+.dashboard-layout .nav-label {
+  margin: 18px 0 8px;
+  padding: 0 12px;
+
+  color: #8a909b;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.dashboard-layout .nav-label:first-child {
+  margin-top: 0;
+}
+
+
+/* Navigation links */
+
+.dashboard-layout .sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 11px 12px;
+
+  border-radius: 9px;
+
+  color: #5f6678;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* Icons */
+
+.dashboard-layout .nav-icon {
+  width: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #737987;
+
+  font-size: 17px;
+  line-height: 1;
+}
+
+
+/* Hover */
+
+.dashboard-layout .sidebar-nav a:hover {
+  background: #f5f6f8;
+  color: #172033;
+}
+
+
+/* Active */
+
+.dashboard-layout .sidebar-nav a.active {
+  background: #f0f2f5;
+  color: #172033;
+  font-weight: 600;
+}
+
+.dashboard-layout .sidebar-nav a.active .nav-icon {
+  color: inherit;
+}
+
+
+/* ================================
+   BOTTOM ACTIONS
+================================ */
+
+.dashboard-layout .sidebar-bottom {
+  margin-top: auto;
+
+  padding-top: 16px;
+
+  border-top: 1px solid #eceef1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  flex-shrink: 0;
+}
+
+
+/* Home + Logout */
+
+.dashboard-layout .sidebar-bottom a,
+.dashboard-layout .sidebar-bottom button {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 11px 12px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #737987;
+
+  font-size: 13px;
+  font-family: inherit;
+
+  text-decoration: none;
+
+  cursor: pointer;
+  text-align: left;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* Hover */
+
+.dashboard-layout .sidebar-bottom a:hover,
+.dashboard-layout .sidebar-bottom button:hover {
+  background: #f5f6f8;
+  color: #172033;
+}
+
+
+/* Logout button */
+
+.dashboard-layout .sidebar-logout {
+  appearance: none;
+}
+
+
+/* Icons */
+
+.dashboard-layout .logout-icon {
+  width: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.dashboard-layout .dashboard-main {
+  width: calc(100% - 230px);
+
+  min-height: 100vh;
+
+  margin-left: 230px;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+  .dashboard-layout .sidebar {
+    width: 190px;
+    padding: 25px 14px;
+  }
+
+  .dashboard-layout .dashboard-main {
+    width: calc(100% - 190px);
+    margin-left: 190px;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .dashboard-layout .sidebar {
+    width: 70px;
+    padding: 25px 10px;
+  }
+
+  .dashboard-layout .dashboard-logo {
+    padding: 0;
+    text-align: center;
+    font-size: 0;
+  }
+
+  .dashboard-layout .dashboard-logo::after {
+    content: "U";
+
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .dashboard-layout .nav-label {
+    display: none;
+  }
+
+  .dashboard-layout .sidebar-nav a {
+    justify-content: center;
+    padding: 11px;
+    font-size: 0;
+  }
+
+  .dashboard-layout .nav-icon {
+    font-size: 18px;
+    width: auto;
+  }
+
+  .dashboard-layout .sidebar-bottom a,
+  .dashboard-layout .sidebar-bottom button {
+    justify-content: center;
+    padding: 11px;
+    font-size: 0;
+  }
+
+  .dashboard-layout .logout-icon {
+    font-size: 18px;
+    width: auto;
+  }
+
+  .dashboard-layout .dashboard-main {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+
+}
+
+/* ================================
+   HOME
+================================ */
+
+.dashboard-layout .sidebar-home {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 11px 12px;
+  margin-bottom: 8px;
+
+  border-radius: 9px;
+
+  color: #5f6678;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.dashboard-layout .sidebar-home:hover {
+  background: #f5f6f8;
+  color: #172033;
+}
+
+.home-link {
+  margin-bottom: 12px;
+}
+
+.sidebar-nav .home-link {
+  color: #242321;
+}
+
+.sidebar-nav .home-link:hover {
+  background: #f5f6f8;
+}
+
+.sidebar-nav .home-link.active {
+  background: #f0f2f5;
+  color: #172033;
+  font-weight: 600;
+}
