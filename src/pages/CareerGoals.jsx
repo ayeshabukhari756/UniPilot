@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react"
 import "./CareerGoals.css"
 
-const API_URL = "http://localhost:5000"
+const API_URL = "https://unipilot-production.up.railway.app"
 
 function getAuthHeaders() {
   const token = localStorage.getItem("token")

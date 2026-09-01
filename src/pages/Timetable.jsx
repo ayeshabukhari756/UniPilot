@@ -177,7 +177,7 @@ function Timetable() {
   // ============================================================
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/timetable", {
+    fetch("https://unipilot-production.up.railway.app/api/timetable", {
       headers: getAuthHeaders(),
     })
       .then((response) => response.json())
@@ -244,7 +244,7 @@ function Timetable() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/timetable",
+        "https://unipilot-production.up.railway.app/api/timetable",
         {
           method: "POST",
           headers: getAuthHeaders(),
@@ -311,7 +311,7 @@ function Timetable() {
   async function deleteClass(id) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/timetable/${id}`,
+        `https://unipilot-production.up.railway.app/api/timetable/${id}`,
         {
           method: "DELETE",
           headers: getAuthHeaders(),
@@ -535,7 +535,7 @@ function Timetable() {
 
       const response =
         await fetch(
-          "http://localhost:5000/api/timetable/import",
+          "https://unipilot-production.up.railway.app/api/timetable/import",
           {
             method: "POST",
             headers:
@@ -613,7 +613,7 @@ function Timetable() {
       ) {
         const response =
           await fetch(
-            "http://localhost:5000/api/timetable",
+            "https://unipilot-production.up.railway.app/api/timetable",
             {
               method: "POST",
               headers:

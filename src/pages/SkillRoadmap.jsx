@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react"
 import "./SkillRoadmap.css"
 
-const API_URL = "http://localhost:5000"
+const API_URL = "https://unipilot-production.up.railway.app"
 
 function SkillRoadmap() {
   const careerData = {

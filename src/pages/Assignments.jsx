@@ -51,7 +51,7 @@ function Assignments() {
   // LOAD ASSIGNMENTS
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/assignments", {
+    fetch("https://unipilot-production.up.railway.app/api/assignments", {
       headers: getAuthHeaders(),
     })
       .then((response) => response.json())
@@ -119,7 +119,7 @@ function Assignments() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/assignments",
+        "https://unipilot-production.up.railway.app/api/assignments",
         {
           method: "POST",
           headers: getAuthHeaders(),
@@ -160,7 +160,7 @@ function Assignments() {
   async function toggleComplete(id, completed) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/assignments/${id}`,
+        `https://unipilot-production.up.railway.app/api/assignments/${id}`,
         {
           method: "PUT",
           headers: getAuthHeaders(),
@@ -194,7 +194,7 @@ function Assignments() {
   async function deleteAssignment(id) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/assignments/${id}`,
+        `https://unipilot-production.up.railway.app/api/assignments/${id}`,
         {
           method: "DELETE",
           headers: getAuthHeaders(),

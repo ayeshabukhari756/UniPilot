@@ -26,7 +26,7 @@ function Analytics() {
         }
 
         const response = await fetch(
-          "http://localhost:5000/api/analytics",
+          "https://unipilot-production.up.railway.app/api/analytics",
           {
             headers: {
               Authorization: `Bearer ${token}`,

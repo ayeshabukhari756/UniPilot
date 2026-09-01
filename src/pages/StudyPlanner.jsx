@@ -38,7 +38,7 @@ function StudyPlanner() {
     async function loadSessions() {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/study-sessions",
+          "https://unipilot-production.up.railway.app/api/study-sessions",
           {
             headers: getAuthHeaders(),
           }
@@ -86,7 +86,7 @@ function StudyPlanner() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/study-sessions",
+        "https://unipilot-production.up.railway.app/api/study-sessions",
         {
           method: "POST",
           headers: getAuthHeaders(),
@@ -139,7 +139,7 @@ function StudyPlanner() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/study-sessions/${id}`,
+        `https://unipilot-production.up.railway.app/api/study-sessions/${id}`,
         {
           method: "PUT",
           headers: getAuthHeaders(),
@@ -180,7 +180,7 @@ function StudyPlanner() {
   async function deleteTask(id) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/study-sessions/${id}`,
+        `https://unipilot-production.up.railway.app/api/study-sessions/${id}`,
         {
           method: "DELETE",
           headers: getAuthHeaders(),

@@ -25,7 +25,7 @@ function Notifications() {
     async function loadNotifications() {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/notifications",
+          "https://unipilot-production.up.railway.app/api/notifications",
           {
             headers: getAuthHeaders(),
           }
@@ -63,7 +63,7 @@ function Notifications() {
   async function markAsRead(id) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/notifications/${id}`,
+        `https://unipilot-production.up.railway.app/api/notifications/${id}`,
         {
           method: "PUT",
           headers: getAuthHeaders(),
@@ -106,7 +106,7 @@ function Notifications() {
   async function markAllAsRead() {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/notifications/read-all",
+        "https://unipilot-production.up.railway.app/api/notifications/read-all",
         {
           method: "PUT",
           headers: getAuthHeaders(),
@@ -146,7 +146,7 @@ function Notifications() {
   async function deleteNotification(id) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/notifications/${id}`,
+        `https://unipilot-production.up.railway.app/api/notifications/${id}`,
         {
           method: "DELETE",
           headers: getAuthHeaders(),
@@ -184,7 +184,7 @@ function Notifications() {
   async function clearAll() {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/notifications",
+        "https://unipilot-production.up.railway.app/api/notifications",
         {
           method: "DELETE",
           headers: getAuthHeaders(),

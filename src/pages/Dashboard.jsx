@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import "./Dashboard.css"
 
-const API = "http://localhost:5000"
+const API = "https://unipilot-production.up.railway.app"
 
 function Dashboard() {
   const navigate = useNavigate()

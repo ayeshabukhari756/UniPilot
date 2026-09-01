@@ -37,7 +37,7 @@ function Exams() {
     async function loadExams() {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/exams",
+          "https://unipilot-production.up.railway.app/api/exams",
           {
             headers: getAuthHeaders(),
           }
@@ -92,7 +92,7 @@ function Exams() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/exams",
+        "https://unipilot-production.up.railway.app/api/exams",
         {
           method: "POST",
           headers: getAuthHeaders(),
@@ -135,7 +135,7 @@ function Exams() {
   async function deleteExam(id) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/exams/${id}`,
+        `https://unipilot-production.up.railway.app/api/exams/${id}`,
         {
           method: "DELETE",
           headers: getAuthHeaders(),
