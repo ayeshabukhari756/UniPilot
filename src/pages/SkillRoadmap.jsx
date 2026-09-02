@@ -11,10 +11,10 @@ function SkillRoadmap() {
       scope:
         "Useful for web development, software engineering, freelance work, startups, and technology companies.",
       skills: [
-        { id: 1, name: "HTML & CSS", category: "Technical", progress: 100, status: "Completed" },
-        { id: 2, name: "JavaScript", category: "Programming", progress: 100, status: "Completed" },
-        { id: 3, name: "React", category: "Frontend", progress: 70, status: "In Progress" },
-        { id: 4, name: "Node.js", category: "Backend", progress: 35, status: "In Progress" },
+        { id: 1, name: "HTML & CSS", category: "Technical", progress: 0, status: "Next" },
+        { id: 2, name: "JavaScript", category: "Programming", progress: 0, status: "Next" },
+        { id: 3, name: "React", category: "Frontend", progress: 0, status: "Next" },
+        { id: 4, name: "Node.js", category: "Backend", progress: 0, status: "Next" },
         { id: 5, name: "REST APIs", category: "Backend", progress: 0, status: "Next" },
         { id: 6, name: "Databases", category: "Data", progress: 0, status: "Next" },
         { id: 7, name: "Authentication", category: "Security", progress: 0, status: "Next" },
@@ -28,10 +28,10 @@ function SkillRoadmap() {
       scope:
         "Useful for web development, UI engineering, product teams, agencies, and freelance work.",
       skills: [
-        { id: 1, name: "HTML & CSS", category: "Technical", progress: 100, status: "Completed" },
-        { id: 2, name: "JavaScript", category: "Programming", progress: 100, status: "Completed" },
-        { id: 3, name: "React", category: "Framework", progress: 70, status: "In Progress" },
-        { id: 4, name: "Responsive Design", category: "Design", progress: 40, status: "In Progress" },
+        { id: 1, name: "HTML & CSS", category: "Technical", progress: 0, status: "Next" },
+        { id: 2, name: "JavaScript", category: "Programming", progress: 0, status: "Next" },
+        { id: 3, name: "React", category: "Framework", progress: 0, status: "Next" },
+        { id: 4, name: "Responsive Design", category: "Design", progress: 0, status: "Next" },
         { id: 5, name: "Accessibility", category: "UI", progress: 0, status: "Next" },
         { id: 6, name: "Testing", category: "Engineering", progress: 0, status: "Next" },
       ],
@@ -43,8 +43,8 @@ function SkillRoadmap() {
       scope:
         "Useful for software engineering, cloud applications, API development, and full-stack careers.",
       skills: [
-        { id: 1, name: "Programming Fundamentals", category: "Programming", progress: 100, status: "Completed" },
-        { id: 2, name: "Node.js", category: "Backend", progress: 35, status: "In Progress" },
+        { id: 1, name: "Programming Fundamentals", category: "Programming", progress: 0, status: "Next" },
+        { id: 2, name: "Node.js", category: "Backend", progress: 0, status: "Next" },
         { id: 3, name: "REST APIs", category: "Backend", progress: 0, status: "Next" },
         { id: 4, name: "Databases", category: "Data", progress: 0, status: "Next" },
         { id: 5, name: "Authentication", category: "Security", progress: 0, status: "Next" },
