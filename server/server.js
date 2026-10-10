@@ -25,8 +25,10 @@ const JWT_SECRET =
 // TIMETABLE IMPORT
 // ============================================================
 
+const path = require("path")
+
 const upload = multer({
-  dest: "uploads/"
+  dest: path.join(__dirname, "uploads")
 })
 
 // ============================================================
